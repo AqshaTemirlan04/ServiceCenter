@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --main-color:#7597de;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(#2b1055,#7597de);
+    overflow-x: hidden;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+header ul li a:hover, 
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+}
+header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+header .icons div:hover{
+    color:var(--main-color);
+}
+#menu-btn{
+    display: none;
+}
+header .search-form{
+    position: absolute;
+    top: 115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--main-color);
+}
+header .search-form label:hover{
+    color: var(--main-color);
+}
+header .cart-items-container{
+    position: absolute;
+    top: 100%; right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 25rem;
+    background: #fff;
+    padding: 0 1.5rem;
+}
+header .cart-items-container .cart-item{
+    position: relative;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--main-color);
+}
+header .cart-items-container .cart-item .fa-times:hover{
+    color: var(--main-color);
+}
+header .cart-items-container .cart-item img{
+    height: 7rem;
+}
+header .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+header .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+#section1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#section1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+#section1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#section1 img#moon {
+    mix-blend-mode: screen;
+}
+#section1 img#mountains_front {
+    z-index: 10;
+}
+#text {
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 6.5vw;
+    z-index: 9;
+}
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+.hub_info {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+.hub_info h2 {
+    text-align: center;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.hub_info p {
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+}
+.hub_info h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.hub_info h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.hub_info::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+.secondPage_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+    width: 113px;
+    height: 113px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+.secondPage_block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+.secondPage_descr {
+    width: 343px;
+}
+.secondPage_text {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+}
+.secondPage_subtitle {
+    line-height: 21px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+}
+.label {
+    padding-top: 20px;
+    text-align: center;
+}
+.label2 {
+    padding-top: 80px;
+    text-align: center;
+}
+#leaders {
+    padding-top: 40px;
+}
+#leaders h1,
+.registration h1,
+.small_hubs h1{
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 2rem;
+}
+.registration h1 {
+    padding-top: 200px;
+}
+#leaders p,
+.small_hubs p {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    color: #fff;
+}
+#leaders h2,
+.small_hubs h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+.leaders img,
+.small_hubs img {
+    border-radius: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 50%;
+    height: 50%;
+}
+.leaders .row,
+.small_hubs .row {
+    margin: 0 auto;
+    padding: 0 3rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+.btn_Arnur {
+    display: inline-block;
+    padding: 2.7rem 7.5rem;
+    background: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    color:#2b1055;
+    border-radius: 10px;
+}
+.btn_Arnur:hover {
+    background: #dadada;
+}
+.mini_text {
+    font-size: 1rem;
+}
+.hub {
+    border-color: #fff;
+}
+hr {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    height: 10px;
+    border: 0;
+    color: #fff;
+}
+#getInfo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    min-height: 100vh;
+    background: #112d42;
+    padding-top: 100px;
+}
+
+#getInfo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #03a9f4;
+}
+#getInfo .container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex; 
+    z-index: 1000;   
+}
+#getInfo .container .contact_info {
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #0f3959;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+}   
+#getInfo .container .contact_info h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+#getInfo .container .contact_info .info {
+    position: relative;
+    margin: 20px 0;
+}
+#getInfo .container .contact_info .info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+}
+#getInfo .container .contact_info .info li span:nth-child(1) {
+    width: 30px;
+    min-width: 30px;
+}
+#getInfo .container .contact_info .info li span:nth-child(1) img {
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+#getInfo .container .contact_info .info li span:nth-child(2) {
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+#getInfo .container .contact_info .info li:hover span:nth-child(1) img,
+#getInfo .container .contact_info .info li:hover span:nth-child(2) {
+    opacity: 1;
+}
+#getInfo .container .contact_info .sci {
+    position: relative;
+    display: flex;
+}
+#getInfo .container .contact_info .sci li {
+    list-style: none;
+    margin-right: 15px;
+}
+#getInfo .container .contact_info .sci li a {
+    text-decoration: none;
+
+}
+#getInfo .container .contact_info .sci li a img {
+    filter: invert(1);
+    opacity: 0.5;
+}
+#getInfo .container .contact_info .sci li:hover a img {
+    opacity: 1;
+}
+#getInfo .container .contact_form {
+    position: absolute;
+    padding: 70px 50px;
+    background: #fff;
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 150px);
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0, 0,0, 0.5);
+}
+#getInfo .container .contact_form h2{
+    color: #0f3059;
+    font-size: 24px;
+    font-weight: 500;
+}
+#getInfo .container .contact_form #test-form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+
+}
+#getInfo .container .contact_form #test-form .inputBox {
+    position: relative;
+    margin: 0 0 35px 0;
+}
+#getInfo .container .contact_form #test-form .inputBox.w50 {
+    width: 47%;
+}
+#getInfo .container .contact_form #test-form .inputBox.w100 {
+    width: 100%;
+}
+#getInfo .container .contact_form #test-form .inputBox input,
+#getInfo .container .contact_form #test-form .inputBox textarea {
+    width: 100% !important;
+    padding: 5px 0;
+    font-size: 18px;
+    resize: none;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+#getInfo .container .contact_form #test-form .inputBox textarea  {
+    min-width: 120px;
+}
+
+#getInfo .container .contact_form #test-form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    resize: none;
+    font-weight: 300;
+    color: #333;
+    transition: 0.3s;
+    pointer-events: none;
+}
+#getInfo .container .contact_form #test-form .inputBox textarea:focus ~ span,
+#getInfo .container .contact_form #test-form .inputBox input:focus ~ span,
+#getInfo .container .contact_form #test-form .inputBox textarea:valid ~ span,
+#getInfo .container .contact_form #test-form .inputBox input:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ff568c;
+}
+#getInfo .container .contact_form #test-form .inputBox input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background: #0f3959;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+#getInfo .container .contact_form #test-form .inputBox input[type="submit"]:hover {
+    background: #ff568c;
+
+}
+.group {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+.group li {
+  display: inline-block;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  text-decoration: none;
+}
+footer h5 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    header .ul{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    header .ul a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+    header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+}
